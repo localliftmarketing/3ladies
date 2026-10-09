@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="Nail enhancements, manicures, pedicures, nail art and waxing in Fayetteville, Georgia. Request your appointment by text." />
+  <link rel="icon" href="icon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>3 Ladies Nails &amp; Spa</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper:#f7f3f2;
+      --surface:#fffdfc;
+      --surface-2:#eee6e6;
+      --ink:#241a1e;
+      --muted:#6f6066;
+      --line:#d9cbce;
+      --berry:#963452;
+      --berry-dark:#70253e;
+      --berry-soft:#f0dce2;
+      --gold:#a47a34;
+      --shadow:0 22px 60px rgba(68,35,46,.14);
+      --radius-sm:10px;
+      --radius-md:22px;
+      --radius-lg:34px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper:#171215;
+        --surface:#221a1e;
+        --surface-2:#2f252a;
+        --ink:#fff7f8;
+        --muted:#c8b7bd;
+        --line:#4a3940;
+        --berry:#d66b8f;
+        --berry-dark:#ef83a7;
+        --berry-soft:#3c202a;
+        --gold:#d2ac68;
+        --shadow:0 22px 60px rgba(0,0,0,.35);
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden}
+    img{display:block;max-width:100%}
+    a{color:inherit}
+    button,input,select,textarea{font:inherit}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topline{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;font-size:13px;color:var(--muted)}
+    .topline strong{color:var(--ink);font-weight:700}
+    .top-actions{display:flex;align-items:center;gap:18px}
+    .top-actions a{text-decoration:none;font-weight:700}
+    .pill-link{padding:10px 15px;background:var(--ink);color:var(--paper)!important;border-radius:999px}
+    .hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(380px,.9fr);gap:62px;align-items:center;padding:28px 0 84px}
+    .hero-copy{padding:54px 0 34px}
+    .local-line{display:flex;align-items:center;gap:10px;color:var(--berry);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+    .local-line:before{content:"";width:30px;height:1px;background:currentColor}
+    h1,h2,h3{font-family:"Bodoni Moda",Georgia,serif;margin:0;line-height:1.03;font-weight:600}
+    h1{font-size:clamp(50px,7vw,86px);letter-spacing:-.045em;max-width:720px;margin:20px 0 24px}
+    .hero-copy p{font-size:18px;max-width:590px;color:var(--muted);margin:0 0 32px}
+    .hero-buttons{display:flex;flex-wrap:wrap;gap:12px}
+    .button{appearance:none;border:0;border-radius:999px;padding:14px 22px;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:700;cursor:pointer;transition:transform .18s ease,background .18s ease}
+    .button:hover{transform:translateY(-2px)}
+    .button.primary{background:var(--berry);color:white}
+    .button.primary:hover{background:var(--berry-dark)}
+    .button.secondary{background:transparent;border:1px solid var(--line)}
+    .hero-photo{position:relative;height:650px}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;border-radius:180px 180px var(--radius-lg) var(--radius-lg);box-shadow:var(--shadow)}
+    .hero-photo:after{content:"";position:absolute;inset:16px;border:1px solid rgba(255,255,255,.55);border-radius:170px 170px 24px 24px;pointer-events:none}
+    .walkin-note{position:absolute;left:-38px;bottom:38px;width:160px;background:var(--surface);padding:20px;border-radius:50%;aspect-ratio:1;display:grid;place-items:center;text-align:center;box-shadow:var(--shadow);font-family:"Bodoni Moda",serif;font-size:18px;line-height:1.15;transform:rotate(-6deg)}
+    .trustbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .trustbar .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding:24px 0}
+    .trust-item{padding:0 28px;border-right:1px solid var(--line)}
+    .trust-item:first-child{padding-left:0}.trust-item:last-child{border:0}
+    .trust-item b{display:block;font-size:15px}.trust-item span{color:var(--muted);font-size:13px}
+    section{padding:96px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:42px}
+    .section-head h2{font-size:clamp(40px,5vw,64px);letter-spacing:-.035em}
+    .section-head p{max-width:480px;color:var(--muted);margin:0}
+    .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden}
+    summary{list-style:none;cursor:pointer;padding:24px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:"Bodoni Moda",serif;font-size:25px;font-weight:600}
+    summary::-webkit-details-marker{display:none}
+    summary span:last-child{width:30px;height:30px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;font-family:Manrope,sans-serif;font-size:19px;transition:transform .2s ease}
+    details[open] summary span:last-child{transform:rotate(45deg)}
+    .price-list{padding:0 26px 24px}
+    .price-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:11px 0;border-top:1px solid var(--line)}
+    .price-row b{font-size:14px}.price-row span{font-weight:700;color:var(--berry);white-space:nowrap}
+    .price-note{font-size:12px;color:var(--muted);margin:20px 2px 0}
+    .gallery-shell{background:var(--ink);color:var(--paper);padding:96px 0}
+    @media (prefers-color-scheme:dark){.gallery-shell{background:#0d0a0c;color:#fff7f8}}
+    .gallery-shell .section-head p{color:rgba(255,247,248,.7)}
+    .gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-auto-rows:230px;grid-auto-flow:dense;gap:14px}
+    .gallery figure{margin:0;overflow:hidden;border-radius:var(--radius-sm);position:relative}
+    .gallery figure:first-child{grid-row:span 2}
+    .gallery figure:nth-child(4),.gallery figure:nth-child(8){grid-column:span 2}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .gallery figure:hover img{transform:scale(1.025)}
+    .booking{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;align-items:start}
+    .booking-copy{position:sticky;top:28px}
+    .booking h2{font-size:clamp(42px,5vw,66px);letter-spacing:-.035em;margin-bottom:20px}
+    .booking-copy p{color:var(--muted);margin:0 0 25px}
+    .steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
+    .steps li{display:flex;gap:12px;align-items:center;font-size:14px;font-weight:600}
+    .steps span{width:28px;height:28px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;background:var(--berry-soft);color:var(--berry);font-size:12px}
+    .booking-form{background:var(--surface);border:1px solid var(--line);padding:34px;border-radius:var(--radius-lg);box-shadow:var(--shadow)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .field{display:grid;gap:8px}.field.full{grid-column:1/-1}
+    label{font-size:12px;font-weight:700;letter-spacing:.03em}
+    input,select,textarea{width:100%;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:12px;padding:14px 15px;outline:none;min-height:50px}
+    input:focus,select:focus,textarea:focus{border-color:var(--berry);box-shadow:0 0 0 3px var(--berry-soft)}
+    textarea{resize:vertical;min-height:92px}
+    .form-note{font-size:12px;color:var(--muted);margin:14px 0 18px}
+    .booking-form .button{width:100%;min-height:54px}
+    .status{display:none;margin-top:14px;padding:16px;background:var(--berry-soft);color:var(--ink);border-radius:10px;font-size:13px}
+    .status.ready{display:grid;gap:12px}
+    .status.error{background:#f7e3e0;color:#772d27}
+    .status.error .status-actions{display:none}
+    .status p{margin:0}
+    .status-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .status-actions .button{min-height:48px;padding:12px 16px}
+    .visit{background:var(--surface-2)}
+    .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+    .visit h2{font-size:clamp(40px,5vw,62px);letter-spacing:-.035em;margin-bottom:28px}
+    .info-block{padding:20px 0;border-top:1px solid var(--line)}
+    .info-block small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+    .info-block strong,.info-block a{font-size:17px;text-decoration:none}
+    .hours{display:grid;grid-template-columns:1fr auto;gap:11px 24px;margin-top:8px}
+    .hours span:nth-child(even){font-weight:700}
+    footer{padding:34px 0 calc(34px + env(safe-area-inset-bottom));font-size:12px;color:var(--muted)}
+    footer .wrap{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .mobile-book{display:none}
+    @media(max-width:850px){
+      .wrap{width:min(100% - 28px,680px)}
+      .topline{padding:14px 0}.topline>span{display:none}.top-actions{width:100%;justify-content:space-between}.top-actions .pill-link{display:none}
+      .hero{grid-template-columns:1fr;gap:22px;padding:4px 0 56px}
+      .hero-copy{padding:42px 0 6px}
+      h1{font-size:clamp(46px,13vw,68px)}
+      .hero-photo{height:min(118vw,600px)}
+      .walkin-note{left:16px;bottom:18px;width:138px;font-size:16px}
+      .trustbar .wrap{grid-template-columns:1fr}.trust-item{padding:15px 0;border-right:0;border-bottom:1px solid var(--line)}
+      section,.gallery-shell{padding:72px 0}
+      .section-head{display:block}.section-head h2{margin-bottom:15px}
+      .service-grid,.booking,.visit-grid{grid-template-columns:1fr;gap:38px}
+      .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:190px}
+      .gallery figure:first-child{grid-column:1/3;grid-row:span 2}.gallery figure:nth-child(4),.gallery figure:nth-child(8){grid-column:1/3}
+      .booking-copy{position:static}.booking-form{padding:24px 18px;border-radius:24px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+      footer{padding-bottom:calc(94px + env(safe-area-inset-bottom))}footer .wrap{align-items:flex-start;flex-direction:column}
+      .mobile-book{display:block;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:20;background:var(--berry);color:white;text-align:center;text-decoration:none;padding:14px 18px;border-radius:999px;font-weight:800;box-shadow:0 12px 34px rgba(92,27,49,.35)}
+    }
+    @media(max-width:480px){
+      .hero-buttons .button{width:100%}
+      .gallery{grid-auto-rows:160px}
+      summary{padding:21px 20px;font-size:22px}.price-list{padding:0 20px 20px}
+      .price-row b{font-size:13px}.booking-form{box-shadow:none}
+      .status-actions{grid-template-columns:1fr}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.gallery img,summary span:last-child{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap topline" aria-label="Quick links">
+    <span><strong>3 Ladies Nails &amp; Spa</strong> · Fayetteville, Georgia</span>
+    <div class="top-actions">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a class="pill-link" href="#book">Request an appointment</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="local-line">Nail care in Fayetteville</div>
+        <h1>Fresh nails.<br>Your favorite shape.<br>Done right.</h1>
+        <p>From a clean classic manicure to custom Gel-X and spa pedicures, our team is here to bring your vision to life.</p>
+        <div class="hero-buttons">
+          <a class="button primary" href="tel:+16784896750" target="_top">Call to book <span aria-hidden="true">→</span></a>
+          <a class="button secondary" href="#services">See services &amp; prices</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/nails-feature.jpg" alt="Glossy custom nail art created for a 3 Ladies Nails & Spa client" />
+        <div class="walkin-note">Open<br>seven<br>days</div>
+      </div>
+    </section>
+
+    <div class="trustbar">
+      <div class="wrap">
+        <div class="trust-item"><b>Full-service nail care</b><span>Manicures, pedicures, extensions &amp; more</span></div>
+        <div class="trust-item"><b>Custom looks</b><span>Bring your inspiration—we’ll make it yours</span></div>
+        <div class="trust-item"><b>Open 7 days</b><span>Flexible hours Monday through Sunday</span></div>
+      </div>
+    </div>
+
+    <section id="services" class="wrap">
+      <div class="section-head">
+        <h2>Choose your service</h2>
+        <p>Prices shown are starting prices. Length, shape, design and product removal may change the final total.</p>
+      </div>
+      <div class="service-grid">
+        <details open>
+          <summary><span>Nail Enhancements</span><span aria-hidden="true">+</span></summary>
+          <div class="price-list">
+            <div class="price-row"><b>Gel-X Full Set</b><span>$55 &amp; up</span></div>
+            <div class="price-row"><b>Gel-X Fill</b><span>$50 &amp; up</span></div>
+            <div class="price-row"><b>Builder Gel Full Set</b><span>$55 &amp; up</span></div>
+            <div class="price-row"><b>Builder Gel Fill</b><span>$50 &amp; up</span></div>
+            <div class="price-row"><b>Acrylic Full Set</b><span>$50 &amp; up</span></div>
+            <div class="price-row"><b>Acrylic Fill</b><span>$45 &amp; up</span></div>
+            <div class="price-row"><b>Dipping Powder</b><span>$50 &amp; up</span></div>
+          </div>
+        </details>
+        <details open>
+          <summary><span>Manicure</span><span aria-hidden="true">+</span></summary>
+          <div class="price-list">
+            <div class="price-row"><b>Classic Manicure</b><span>$20</span></div>
+            <div class="price-row"><b>Lady’s Deluxe Manicure</b><span>$30</span></div>
+            <div class="price-row"><b>Gel Manicure</b><span>$35</span></div>
+            <div class="price-row"><b>Classic Manicure &amp; Pedicure</b><span>$50</span></div>
+          </div>
+        </details>
+        <details>
+          <summary><span>Pedicure</span><span aria-hidden="true">+</span></summary>
+          <div class="price-list">
+            <div class="price-row"><b>Basic Pedicure</b><span>$30</span></div>
+            <div class="price-row"><b>Spa Pedicure</b><span>$35</span></div>
+            <div class="price-row"><b>Essential Pedicure</b><span>$40</span></div>
+            <div class="price-row"><b>Deluxe Pedicure</b><span>$45</span></div>
+            <div class="price-row"><b>Detox Pedicure</b><span>$50</span></div>
+            <div class="price-row"><b>Collagen Pedicure</b><span>$55</span></div>
+            <div class="price-row"><b>Jelly Pedicure</b><span>$60</span></div>
+            <div class="price-row"><b>Volcano Spa Pedicure</b><span>$65</span></div>
+            <div class="price-row"><b>3 Ladies Volcano CBD Pedicure</b><span>$75</span></div>
+          </div>
+        </details>
+        <details>
+          <summary><span>Add-ons &amp; Nail Art</span><span aria-hidden="true">+</span></summary>
+          <div class="price-list">
+            <div class="price-row"><b>Polish Change — Hands</b><span>$12</span></div>
+            <div class="price-row"><b>Polish Change — Feet</b><span>$15</span></div>
+            <div class="price-row"><b>Nail Design</b><span>$6 &amp; up</span></div>
+            <div class="price-row"><b>Nail Shape</b><span>$5</span></div>
+            <div class="price-row"><b>Nail Repair</b><span>$5 &amp; up</span></div>
+            <div class="price-row"><b>French Tips</b><span>$5</span></div>
+            <div class="price-row"><b>Take Off Gel — No Service</b><span>$10</span></div>
+            <div class="price-row"><b>Take Off Acrylic</b><span>$15</span></div>
+            <div class="price-row"><b>Take Off Dipping Powder</b><span>$10</span></div>
+            <div class="price-row"><b>Two Big Toe Extensions</b><span>$15</span></div>
+            <div class="price-row"><b>Fill Two Big Toes</b><span>$8</span></div>
+            <div class="price-row"><b>Cut Down</b><span>$3 &amp; up</span></div>
+            <div class="price-row"><b>Leg Steamer</b><span>$15</span></div>
+            <div class="price-row"><b>Hot Stone</b><span>$5</span></div>
+          </div>
+        </details>
+        <details>
+          <summary><span>Kids Menu</span><span aria-hidden="true">+</span></summary>
+          <div class="price-list">
+            <div class="price-row"><b>Manicure</b><span>$12</span></div>
+            <div class="price-row"><b>Pedicure</b><span>$20</span></div>
+            <div class="price-row"><b>Polish Change — Hands or Feet</b><span>$8 &amp; up</span></div>
+            <div class="price-row"><b>Gel Polish</b><span>$18</span></div>
+          </div>
+        </details>
+        <details>
+          <summary><span>Waxing</span><span aria-hidden="true">+</span></summary>
+          <div class="price-list">
+            <div class="price-row"><b>Lip</b><span>$7</span></div>
+            <div class="price-row"><b>Eyebrows</b><span>$10</span></div>
+            <div class="price-row"><b>Chin</b><span>$10 &amp; up</span></div>
+            <div class="price-row"><b>Underarms</b><span>$25 &amp; up</span></div>
+            <div class="price-row"><b>Face</b><span>$25 &amp; up</span></div>
+            <div class="price-row"><b>Lower Arms</b><span>$30 &amp; up</span></div>
+            <div class="price-row"><b>Half Legs</b><span>$33 &amp; up</span></div>
+          </div>
+        </details>
+      </div>
+      <p class="price-note">Final pricing is confirmed at the salon based on length, condition and design detail.</p>
+    </section>
+
+    <section class="gallery-shell" id="gallery">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Our nail gallery</h2>
+          <p>Soft and understated or bold and detailed—show us the look you love.</p>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/gallery-01-silver-floral.jpg" alt="Silver French manicure with sculpted floral nail art" loading="lazy"></figure>
+          <figure><img src="assets/gallery-02-lilac-floral.jpg" alt="Lilac and silver floral stiletto manicure" loading="lazy"></figure>
+          <figure><img src="assets/gallery-03-pink-floral.jpg" alt="Pink ombré manicure with raised floral details" loading="lazy"></figure>
+          <figure><img src="assets/gallery-04-pink-gold.jpg" alt="Glossy pink manicure with gold details" loading="lazy"></figure>
+          <figure><img src="assets/gallery-05-pink-tips.jpg" alt="Pink French tip manicure with gold accents" loading="lazy"></figure>
+          <figure><img src="assets/gallery-06-burgundy.jpg" alt="Burgundy and gold almond manicure" loading="lazy"></figure>
+          <figure><img src="assets/gallery-07-french-white.jpg" alt="Long white French manicure with crystal accents" loading="lazy"></figure>
+          <figure><img src="assets/gallery-08-tropical-floral.jpg" alt="Coral manicure with colorful tropical flower nail art" loading="lazy"></figure>
+          <figure><img src="assets/gallery-09-neutral-art.jpg" alt="Neutral almond manicure with graphic brown nail art" loading="lazy"></figure>
+          <figure><img src="assets/gallery-10-silver-black.jpg" alt="Silver and black stiletto manicure with sparkling details" loading="lazy"></figure>
+          <figure><img src="assets/gallery-11-orange-floral.jpg" alt="Orange floral manicure with sculpted details" loading="lazy"></figure>
+          <figure><img src="assets/gallery-12-black-french.jpg" alt="Black French manicure with graphic white accents" loading="lazy"></figure>
+          <figure><img src="assets/gallery-13-pearl-french.jpg" alt="Soft white French manicure with pearl accents" loading="lazy"></figure>
+          <figure><img src="assets/gallery-14-orange-gradient.jpg" alt="Orange ombré manicure with dark tip details" loading="lazy"></figure>
+          <figure><img src="assets/gallery-15-orange-art.jpg" alt="Long orange manicure with floral and marble nail art" loading="lazy"></figure>
+          <figure><img src="assets/gallery-16-purple-art.jpg" alt="Purple manicure with floral and jeweled nail art" loading="lazy"></figure>
+          <figure><img src="assets/gallery-17-black-white.jpg" alt="Black and white manicure with abstract line art" loading="lazy"></figure>
+          <figure><img src="assets/gallery-18-pink-chrome.jpg" alt="Pink chrome almond manicure with fine line details" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="book" class="wrap booking">
+      <div class="booking-copy">
+        <div class="local-line">Request by text</div>
+        <h2>Tell us what you have in mind.</h2>
+        <p>Choose your service, preferred technician and time. We’ll prepare a text request for you. For the fastest booking, call <a href="tel:+16784896750" target="_top"><strong>(678) 489-6750</strong></a>.</p>
+        <ol class="steps">
+          <li><span>1</span>Complete the request</li>
+          <li><span>2</span>Prepare your text</li>
+          <li><span>3</span>Tap “Text this request” and send</li>
+        </ol>
+      </div>
+      <form class="booking-form" id="bookingForm" novalidate>
+        <div class="form-grid">
+          <div class="field full"><label for="service">SERVICE</label><select id="service" required><option value="">Choose a service</option><option>Gel-X Full Set</option><option>Gel-X Fill</option><option>Builder Gel Full Set</option><option>Builder Gel Fill</option><option>Acrylic Full Set</option><option>Acrylic Fill</option><option>Dipping Powder</option><option>Classic Manicure</option><option>Lady’s Deluxe Manicure</option><option>Gel Manicure</option><option>Classic Manicure & Pedicure</option><option>Basic Pedicure</option><option>Spa Pedicure</option><option>Essential Pedicure</option><option>Deluxe Pedicure</option><option>Detox Pedicure</option><option>Collagen Pedicure</option><option>Jelly Pedicure</option><option>Volcano Spa Pedicure</option><option>3 Ladies Volcano CBD Pedicure</option><option>Kids Service</option><option>Waxing</option><option>Other / Not sure</option></select></div>
+          <div class="field"><label for="date">PREFERRED DATE</label><input id="date" type="date" required></div>
+          <div class="field"><label for="time">PREFERRED TIME</label><input id="time" type="time" required></div>
+          <div class="field full"><label for="tech">PREFERRED TECHNICIAN</label><select id="tech" required><option>No preference (First available)</option><option>Ryan</option><option>Sussan</option><option>Kim</option><option>Hahna</option><option>Lisa</option><option>Lyly</option></select></div>
+          <div class="field"><label for="name">YOUR NAME</label><input id="name" type="text" autocomplete="name" placeholder="Full name" required></div>
+          <div class="field"><label for="phone">YOUR PHONE</label><input id="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Your mobile number" required></div>
+          <div class="field full"><label for="notes">NOTES (OPTIONAL)</label><textarea id="notes" placeholder="Color, shape, length, nail art, removal needed…"></textarea></div>
+        </div>
+        <p class="form-note">This sends your request by SMS. Your appointment is confirmed only after the salon replies.</p>
+        <button class="button primary" type="submit">Prepare text request <span aria-hidden="true">→</span></button>
+        <div class="status" id="status" role="status" aria-live="polite">
+          <p id="statusMessage"></p>
+          <div class="status-actions">
+            <a class="button primary" id="smsLink" href="sms:+14045092709" target="_top">Text this request</a>
+            <a class="button secondary" href="tel:+16784896750" target="_top">Call (678) 489-6750</a>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="wrap visit-grid">
+        <div>
+          <div class="local-line">Find us</div>
+          <h2>Your next set is waiting.</h2>
+          <div class="info-block"><small>Address</small><a href="https://www.google.com/maps/dir/?api=1&amp;destination=3%20Ladies%20Nails%20%26%20Spa%2C%20805%20Glynn%20St%20S%20%23135%2C%20Fayetteville%2C%20GA%2030214" target="_blank" rel="noopener">805 Glynn St S #135<br>Fayetteville, GA 30214</a></div>
+          <div class="info-block"><small>Booking by text</small><a href="sms:+14045092709" target="_top">(404) 509-2709</a></div>
+          <div class="hero-buttons">
+            <a class="button primary" href="tel:+16784896750" target="_top">Call now</a>
+            <a class="button secondary" href="https://www.google.com/maps/dir/?api=1&amp;destination=3%20Ladies%20Nails%20%26%20Spa%2C%20805%20Glynn%20St%20S%20%23135%2C%20Fayetteville%2C%20GA%2030214" target="_blank" rel="noopener">Get directions</a>
+            <a class="button secondary" href="sms:+14045092709" target="_top">Text to book</a>
+          </div>
+        </div>
+        <div>
+          <h2>Hours</h2>
+          <div class="hours">
+            <span>Monday</span><span>10:00 AM–7:30 PM</span>
+            <span>Tuesday</span><span>10:00 AM–7:30 PM</span>
+            <span>Wednesday</span><span>10:00 AM–7:30 PM</span>
+            <span>Thursday</span><span>10:00 AM–7:30 PM</span>
+            <span>Friday</span><span>10:00 AM–7:30 PM</span>
+            <span>Saturday</span><span>10:00 AM–7:30 PM</span>
+            <span>Sunday</span><span>12:00 PM–6:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>3 Ladies Nails &amp; Spa · Fayetteville, GA</span><span>Prices may vary by length and design.</span></div></footer>
+  <a class="mobile-book" href="tel:+16784896750" target="_top">Call to book · (678) 489-6750</a>
+
+  <script>
+    (function(){
+      var gallery=document.querySelector('.gallery');
+      var galleryAlts=[
+        'Salon welcome sign from the 3 Ladies Nails & Spa gallery',
+        'Long neutral manicure with black line details',
+        'Glossy brown almond manicure',
+        'Pink and white French tip manicure',
+        'Purple floral nail art with gold accents',
+        'Fresh pedicure with glossy white polish',
+        'Pink almond manicure with delicate accents',
+        'Colorful nail polish display inside the salon',
+        'Deep burgundy manicure on a client',
+        'Bright multicolor nail art set',
+        'Neutral manicure with dark accent tips',
+        'Pastel blue and pink manicure',
+        'Interior view of 3 Ladies Nails & Spa',
+        'Long pink acrylic manicure',
+        'Pedicure service in progress',
+        'Lime green and gold nail art',
+        'Coordinated manicure and pedicure set',
+        'Turquoise manicure with decorative details',
+        'Gray and pink patterned manicure',
+        'Nail color samples at the salon',
+        'Soft neutral manicure with fine details',
+        'Pale pink manicure on a client',
+        'Warm orange manicure with nail art',
+        'Dark plum almond manicure',
+        'Pink floral nail art close-up',
+        'Pink manicure with white decorative details',
+        'Orange and black patterned manicure',
+        'Blue and white striped nail art',
+        'Blue accent manicure on a client',
+        'Glossy dark brown manicure',
+        'Nude manicure with orange accent nails',
+        'Red and white floral nail design',
+        'Warm brown manicure with glossy finish',
+        'Green and pink floral nail art',
+        '3 Ladies Nails & Spa logo detail',
+        'Purple striped manicure with shimmer',
+        'Neutral pointed manicure with line art',
+        'Purple and white floral nail design',
+        'Bold red and blue manicure',
+        'Soft pink French manicure',
+        'White manicure with green leaf accents',
+        'Pink and silver pointed manicure',
+        'Sparkling silver manicure',
+        'Neutral ombré manicure with dark tips',
+        'Pink manicure with gemstone details',
+        'White and pink manicure with fine artwork',
+        'Glossy rose manicure close-up',
+        'Neutral manicure with black accent nails',
+        'Brown and white patterned manicure',
+        'Black manicure with nude accent nails',
+        'Orange manicure with graphic details',
+        'Long nude manicure with dark line art',
+        'Pink manicure with glitter accents',
+        'White and blue patterned manicure',
+        'Long neutral manicure with jeweled details',
+        'Red manicure with a statement accent nail',
+        'Dark manicure with metallic line details',
+        'Black and neutral geometric manicure',
+        'Orange French tips on a neutral base',
+        'Soft pink manicure with white tips',
+        'Nude manicure with colorful accent art',
+        'White manicure with blue design details',
+        'Coral manicure with glossy finish',
+        'Long brown manicure with gold accents',
+        'Pink and white ombré manicure',
+        'Neutral manicure with abstract dark lines',
+        'Glossy brown manicure with textured accents',
+        'Long white French manicure',
+        'Pink manicure with bright blue accents',
+        'Burgundy manicure with gold details',
+        'Neutral almond manicure with fine artwork',
+        'Pink pointed manicure with dark tips',
+        'Black stiletto manicure with nude bow accent nails'
+      ];
+      for(var photoNumber=1;photoNumber<=73;photoNumber++){
+        var photoId=String(photoNumber).padStart(2,'0');
+        var figure=document.createElement('figure');
+        var image=document.createElement('img');
+        image.src='assets/google-gallery-'+photoId+'.jpg';
+        image.alt=galleryAlts[photoNumber-1];
+        image.loading='lazy';
+        image.decoding='async';
+        figure.appendChild(image);
+        gallery.appendChild(figure);
+      }
+
+      var dateInput=document.getElementById('date');
+      var now=new Date();
+      var localDate=new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,10);
+      dateInput.min=localDate;
+
+      document.getElementById('bookingForm').addEventListener('submit',function(e){
+        e.preventDefault();
+        var status=document.getElementById('status');
+        var statusMessage=document.getElementById('statusMessage');
+        var smsLink=document.getElementById('smsLink');
+        if(!this.checkValidity()){
+          var invalidField=this.querySelector(':invalid');
+          var invalidLabel=invalidField&&document.querySelector('label[for="'+invalidField.id+'"]');
+          var fieldName=invalidLabel?invalidLabel.textContent.toLowerCase():'required field';
+          statusMessage.textContent='Please complete the '+fieldName+' before preparing your text request.';
+          status.classList.add('ready','error');
+          if(invalidField) invalidField.focus();
+          return;
+        }
+        status.classList.remove('error');
+        var service=document.getElementById('service').value;
+        var dateValue=document.getElementById('date').value;
+        var timeValue=document.getElementById('time').value;
+        var tech=document.getElementById('tech').value;
+        var name=document.getElementById('name').value.trim();
+        var phone=document.getElementById('phone').value.trim();
+        var notes=document.getElementById('notes').value.trim();
+        var dateObj=new Date(dateValue+'T12:00:00');
+        var dateText=dateObj.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+        var timeParts=timeValue.split(':');
+        var timeObj=new Date(); timeObj.setHours(Number(timeParts[0]),Number(timeParts[1]));
+        var timeText=timeObj.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+        var message='Hi 3 Ladies Nails & Spa! I would like to request an appointment.\n\nService: '+service+'\nDate: '+dateText+'\nTime: '+timeText+'\nTechnician: '+tech+'\nName: '+name+'\nPhone: '+phone;
+        if(notes) message+='\nNotes: '+notes;
+        message+='\n\nPlease let me know if this time is available. Thank you!';
+        var isAppleMobile=/iPad|iPhone|iPod/.test(navigator.userAgent);
+        var smsUrl='sms:+14045092709'+(isAppleMobile?'&':'?')+'body='+encodeURIComponent(message);
+        smsLink.href=smsUrl;
+        statusMessage.textContent='Your appointment request is ready. Tap below to open your Messages app, then send it to the salon.';
+        status.classList.add('ready');
+        smsLink.focus();
+      });
+    })();
+  </script>
+</body>
+</html>
